@@ -6,11 +6,9 @@ public class App {
   public static void main(String[] args) throws Exception {
     System.out.println("==============================");
 
-    //Nesse exemplo aki agente pode entenderr claramente que o list Integer nao e subtipo de List<Object>
-
-    List<Object> myObjs = new ArrayList<Object>();
+    // O supertipo de qualquer tipo de lista é List<?>. Este é um tipo curinga:
+    List<?> myObjs = new ArrayList<Object>();
     List<Integer> myNumbers = new ArrayList<Integer>();
-    //nao e posivel fazer aki o upcasting
     myObjs = myNumbers; // erro de compilação
   }
 }
